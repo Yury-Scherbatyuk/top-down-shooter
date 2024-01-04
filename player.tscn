@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cupaw7qkpyol4"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_iq07k"]
+[ext_resource type="PackedScene" uid="uid://brlyktxpwaw4q" path="res://Bullet.tscn" id="2_cictv"]
+[ext_resource type="Texture2D" uid="uid://djaoefduaa3dr" path="res://assets/Spritesheet/spritesheet_characters.png" id="2_yx87v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6cxtv"]
+size = Vector2(44.5, 48)
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(112, 80)
+script = ExtResource("1_iq07k")
+Bullet = ExtResource("2_cictv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_yx87v")
+region_enabled = true
+region_rect = Rect2(0, 0, 56, 43)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8.75, 0)
+shape = SubResource("RectangleShape2D_6cxtv")
+
+[node name="EndOfGun" type="Marker2D" parent="."]
+position = Vector2(28.4691, 9.52806)

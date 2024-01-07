@@ -17,3 +17,8 @@ region_rect = Rect2(1332, 1076, 12, 5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_t5nqk")
+
+[node name="BulletDestroyTimer" type="Timer" parent="."]
+wait_time = 1.5
+
+[connection signal="timeout" from="BulletDestroyTimer" to="." method="_on_timer_timeout"]

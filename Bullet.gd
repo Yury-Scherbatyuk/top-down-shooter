@@ -13,3 +13,4 @@ func _process(delta):
 
 func set_direction(input_direction: Vector2):
 	self.direction = input_direction
+	

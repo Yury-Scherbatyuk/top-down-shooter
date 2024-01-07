@@ -15,7 +15,7 @@ Bullet = ExtResource("2_cictv")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_yx87v")
 region_enabled = true
-region_rect = Rect2(0, 0, 56, 43)
+region_rect = Rect2(167, 0, 48, 44)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-8.75, 0)

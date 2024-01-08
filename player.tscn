@@ -10,7 +10,7 @@ size = Vector2(44.5, 48)
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(112, 80)
 script = ExtResource("1_iq07k")
-Bullet = ExtResource("2_cictv")
+Bullet_Scene = ExtResource("2_cictv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_yx87v")
@@ -23,3 +23,5 @@ shape = SubResource("RectangleShape2D_6cxtv")
 
 [node name="EndOfGun" type="Marker2D" parent="."]
 position = Vector2(28.4691, 9.52806)
+
+[node name="AttackCooldown" type="Timer" parent="."]

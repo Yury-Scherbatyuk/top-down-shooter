@@ -9,6 +9,8 @@ signal player_fired_bullet(bullet: Bullet, end_of_gun: Marker2D, direction: Vect
 @onready var attack_cooldown = $AttackCooldown
 @onready var animation_player = $AnimationPlayer
 
+@onready var health_status = $Health
+
 var health: int = 100
 
 func get_input(delta: float):
@@ -35,5 +37,5 @@ func shoot():
 		animation_player.play("muzzle_flash")
 	
 func handle_hit():
-	health -= 20
+	health_status.health -= 20
 	queue_free()

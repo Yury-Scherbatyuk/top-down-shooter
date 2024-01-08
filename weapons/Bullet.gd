@@ -10,7 +10,7 @@ var direction := Vector2.ZERO
 func _ready():
 	bullet_destroy_timer.start()
 
-func _process(delta):
+func _physics_process(delta):
 	if direction != Vector2.ZERO:
 		var velocity = direction * speed * delta
 		

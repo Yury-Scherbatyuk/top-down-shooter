@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://brlyktxpwaw4q"]
 
-[ext_resource type="Script" path="res://Bullet.gd" id="1_cp3av"]
+[ext_resource type="Script" path="res://weapons/Bullet.gd" id="1_cp3av"]
 [ext_resource type="Texture2D" uid="uid://bvfgmf7oc6oc7" path="res://assets/Spritesheet/spritesheet_tiles.png" id="2_bl8u4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t5nqk"]

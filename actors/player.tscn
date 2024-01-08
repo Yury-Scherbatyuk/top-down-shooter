@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cupaw7qkpyol4"]
 
-[ext_resource type="Script" path="res://Player.gd" id="1_iq07k"]
-[ext_resource type="PackedScene" uid="uid://brlyktxpwaw4q" path="res://Bullet.tscn" id="2_cictv"]
+[ext_resource type="Script" path="res://actors/Player.gd" id="1_iq07k"]
+[ext_resource type="PackedScene" uid="uid://brlyktxpwaw4q" path="res://weapons/Bullet.tscn" id="2_cictv"]
 [ext_resource type="Texture2D" uid="uid://djaoefduaa3dr" path="res://assets/Spritesheet/spritesheet_characters.png" id="2_yx87v"]
 [ext_resource type="Texture2D" uid="uid://cdelurj8qvmym" path="res://assets/Spritesheet/onlyObjects_default.png" id="4_0kdrc"]
 

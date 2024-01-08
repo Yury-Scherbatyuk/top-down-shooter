@@ -22,5 +22,12 @@ func set_direction(input_direction: Vector2):
 	
 
 
-func _on_timer_timeout():
-	queue_free() # Replace with function body.
+func _on_BulletDestroyTimer_timeout():
+	queue_free()
+
+
+func _on_body_entered(body: Node2D):
+	if body.has_method("handle_hit"):
+		body.handle_hit()
+		queue_free()
+

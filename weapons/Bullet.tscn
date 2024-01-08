@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://brlyktxpwaw4q"]
 
 [ext_resource type="Script" path="res://weapons/Bullet.gd" id="1_cp3av"]
-[ext_resource type="Texture2D" uid="uid://bvfgmf7oc6oc7" path="res://assets/Spritesheet/spritesheet_tiles.png" id="2_bl8u4"]
+[ext_resource type="Texture2D" uid="uid://icbyqiip14vv" path="res://assets/Spritesheet/allSprites_default.png" id="2_icgw3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t5nqk"]
 size = Vector2(8, 4)
@@ -10,10 +10,11 @@ size = Vector2(8, 4)
 script = ExtResource("1_cp3av")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.928571, 1)
-texture = ExtResource("2_bl8u4")
+rotation = -1.5708
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_icgw3")
 region_enabled = true
-region_rect = Rect2(1332, 1076, 12, 5)
+region_rect = Rect2(476, 130, 8, 18)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_t5nqk")

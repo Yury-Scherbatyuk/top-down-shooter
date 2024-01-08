@@ -21,7 +21,6 @@ func set_direction(input_direction: Vector2):
 	self.direction = input_direction
 	
 
-
 func _on_BulletDestroyTimer_timeout():
 	queue_free()
 

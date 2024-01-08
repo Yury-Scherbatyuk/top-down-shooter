@@ -11,7 +11,7 @@ script = ExtResource("1_bssre")
 [node name="Player" parent="." instance=ExtResource("1_trc67")]
 
 [node name="Enemy" parent="." instance=ExtResource("3_t18na")]
-position = Vector2(271, 80)
+position = Vector2(452, 206)
 
 [node name="BulletManager" type="Node2D" parent="."]
 script = ExtResource("3_7rnam")

@@ -1,15 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1ibhy2s6g6g2"]
+[gd_scene load_steps=8 format=3 uid="uid://b1ibhy2s6g6g2"]
 
 [ext_resource type="Script" path="res://actors/Enemy.gd" id="1_034ev"]
 [ext_resource type="Texture2D" uid="uid://djaoefduaa3dr" path="res://assets/Spritesheet/spritesheet_characters.png" id="3_53plv"]
 [ext_resource type="PackedScene" uid="uid://b8c8337a2hipv" path="res://weapons/weapon.tscn" id="4_65jdg"]
 [ext_resource type="PackedScene" uid="uid://do2fd2fkeve1m" path="res://actors/Health.tscn" id="4_7863g"]
+[ext_resource type="Script" path="res://actors/AI.gd" id="5_tfyl5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6cxtv"]
 size = Vector2(33, 44)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_3x83g"]
+radius = 187.003
+
 [node name="Enemy" type="CharacterBody2D"]
-position = Vector2(112, 80)
 script = ExtResource("1_034ev")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -26,3 +29,13 @@ health = 200
 
 [node name="Weapon" parent="." instance=ExtResource("4_65jdg")]
 position = Vector2(22, 10)
+
+[node name="AI" type="Node2D" parent="."]
+script = ExtResource("5_tfyl5")
+
+[node name="PlayerDetectionZone" type="Area2D" parent="AI" groups=["enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AI/PlayerDetectionZone"]
+shape = SubResource("CircleShape2D_3x83g")
+
+[connection signal="body_entered" from="AI/PlayerDetectionZone" to="AI" method="_on_player_detection_zone_body_entered"]

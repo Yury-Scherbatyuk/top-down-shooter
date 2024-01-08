@@ -6,6 +6,8 @@ signal player_fired_bullet(bullet: Bullet, end_of_gun: Marker2D, direction: Vect
 @export var speed: int = 10000
 
 @onready var end_of_gun = $EndOfGun
+@onready var attack_cooldown = $AttackCooldown
+@onready var animation_player = $AnimationPlayer
 
 func get_input(delta: float):
 	look_at(get_global_mouse_position())
@@ -23,7 +25,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		shoot()
 
 func shoot():
-	var bullet_instance = Bullet_Scene.instantiate()
-	var direction_to_mouse = end_of_gun.global_position.direction_to(get_global_mouse_position()).normalized()
+	if attack_cooldown.is_stopped():
+		var bullet_instance = Bullet_Scene.instantiate()
+		var direction_to_mouse = end_of_gun.global_position.direction_to(get_global_mouse_position()).normalized()
+		emit_signal("player_fired_bullet", bullet_instance, end_of_gun, direction_to_mouse)
+		attack_cooldown.start()
+		animation_player.play("muzzle_flash")
 	
-	emit_signal("player_fired_bullet", bullet_instance, end_of_gun, direction_to_mouse)

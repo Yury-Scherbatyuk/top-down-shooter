@@ -23,5 +23,5 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func handle_hit():
 	health_status.health -= 20
-	if health_status.health <= 0:
-		queue_free()
+	# if health_status.health <= 0:
+	# 	queue_free()
